@@ -1,0 +1,53 @@
+repos:
+- repo: https://github.com/antonbabenko/pre-commit-terraform
+  rev: v1.62.3 # Get the latest from: https://github.com/antonbabenko/pre-commit-terraform/releases
+  hooks:
+    - id: terraform_fmt
+      args:
+        - --args=-write=true
+        - --args=-recursive
+
+    - id: terraform_validate
+      args:
+        - --args=-json
+
+    - id: terraform_tflint
+      args:
+        - --args=--loglevel=trace
+        - --args=--enable-rule=terraform_documented_variables
+        - --args=--module
+
+    - id: checkov
+      args: [
+        "-d", "./terraform",
+        "--framework", "terraform"
+      ]
+
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v4.1.0
+  hooks:
+  - id: detect-aws-credentials
+  - id: detect-private-key
+
+- repo: https://github.com/ansible/ansible-lint.git
+  rev: v4.2.0
+  hooks:
+  - id: ansible-lint
+    files : \.(yaml|yml)$
+    additional_dependencies:
+      - .[community]
+
+-   repo: https://github.com/hmrc/security-git-hooks
+    rev: v1.0.0-beta9
+    hooks:
+    -   id: secrets_filecontent
+        name: Checking staged files for sensitive content
+        exclude: ".tar$|.gz$|.jar$|.7z$|.rar$|.bz2$|.zip$|.gzip$|.war$|.ear$|.xlsx$|.xls$|
+                |.docx$|.doc$|.pptx$|.pdf$|.jpg$|.png$|.jpeg$|.tif$|.tiff$|.gif$|.bmp$|.webp$|.svg$|.ico$|.psd$|.exe$|.dll$|.dmg$|.de$|.rpm$"
+    -   id: secrets_filename
+        name: Checking staged files for sensitive file types
+        exclude: ".tar$|.gz$|.jar$|.7z$|.rar$|.bz2$|.zip$|.gzip$|.war$|.ear$|.xlsx$|.xls$|
+                |.docx$|.doc$|.pptx$|.pdf$|.jpg$|.png$|.jpeg$|.tif$|.tiff$|.gif$|.bmp$|.webp$|.svg$|.ico$|.psd$|.exe$|.dll$|.dmg$|.de$|.rpm$"
+    -   id: hooks_version_check
+        name: Checking local hooks against latest release
+        verbose: true
