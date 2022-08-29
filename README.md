@@ -35,4 +35,4 @@ Copyright © 2022 [Ralph Brynard](https://github.com/Dev0psPleb).
 This project is [MIT](LICENSE) licensed.
 
 ***
-_DevopsPlebGH [Devopspleb[logo]](/assets/images/footer.png) This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+DevopsPlebGH [Devopspleb[logo]](/assets/images/footer.png) _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
