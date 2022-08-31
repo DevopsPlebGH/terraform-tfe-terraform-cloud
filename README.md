@@ -1,4 +1,4 @@
-![DevopsPleb [logo]](/assets/images/devops_pleb.png)
+![DevopsPleb [logo]](https://devopspleb.s3.us-east-2.amazonaws.com/devops_pleb.png)
 # terraform-terraform-tfe-terraform-cloud
 ![Version](https://img.shields.io/badge/version-v0.0.1-blue.svg?cacheSeconds=2592000)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -35,4 +35,6 @@ Copyright © 2022 [Ralph Brynard](https://github.com/Dev0psPleb).
 This project is [MIT](LICENSE) licensed.
 
 ***
-DevopsPlebGH [Devopspleb[logo]](/assets/images/footer.png) _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_ 
+
+![Devopspleb[logo]](/assets/images/footer.png)
