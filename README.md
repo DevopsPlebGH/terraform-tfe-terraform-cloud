@@ -37,4 +37,4 @@ This project is [MIT](LICENSE) licensed.
 ***
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_ 
 
-![Devopspleb[logo]](/assets/images/footer.png)
+![Devopspleb[logo]](https://devopspleb.s3.us-east-2.amazonaws.com/footer.png)
