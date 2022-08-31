@@ -11,6 +11,11 @@ repos:
       args:
         - --args=-json
 
+    - id: terraform_docs
+      args:
+        - --hook-config=--path-to-file=README.md        # Valid UNIX path. I.e. ../TFDOC.md or docs/README.md etc.
+        - --hook-config=--add-to-existing-file=true     # Boolean. true or false
+        - --hook-config=--create-file-if-not-exist=true # Boolean. true or false
     - id: terraform_tflint
       args:
         - --args=--loglevel=trace
